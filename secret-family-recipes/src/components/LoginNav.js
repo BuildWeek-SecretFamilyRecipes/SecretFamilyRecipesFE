@@ -6,8 +6,8 @@ function LoginNav() {
     return (
       <div className="nav-bar"> 
         <nav>
-            <h1>Secret Family Recipes</h1>
-            <a href="#">Sign Up</a>
+            <h1 className="login-header">Secret Family Recipes</h1>
+            <a href="#"><button>Sign Up</button></a> {/* will link to sign up page */}
         </nav>
       </div>
     );

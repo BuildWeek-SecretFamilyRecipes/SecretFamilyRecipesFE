@@ -20,3 +20,14 @@
 .App-link {
   color: #09d3ac;
 }
+
+.nav-bar {
+  background-color: #F1DABF; /* might want to change color  */
+  margin-bottom: 5%;
+  margin-top: -1%; 
+  /* definitley want to put header and button side by side */
+}
+
+.login-header {
+  font-family: 'Raleway', sans-serif; /* Hmmm...not sure why this isn't changing */
+}
