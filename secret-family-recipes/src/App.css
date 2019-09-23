@@ -26,6 +26,12 @@ body {
   color: #09d3ac;
 }
 
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
 .nav-bar {
   background-color: #F1DABF; /* might want to change color  */
   margin-bottom: 5%;
@@ -35,5 +41,17 @@ body {
 }
 
 .login-header {
-  font-family: 'Raleway', sans-serif; /* Hmmm...not sure why this isn't changing */
+  font-family: 'Crimson Text', serif;
+  color: #FFFF;
+  margin: 1%;
+}
+
+.nav-button {
+  height: 30px;
+  width: 100px;
+  border-radius: 5px;
+  font-size: 18px;
+  background-color: #D35269;
+  color: #FFFF;
+  font-family: 'Crimson Text', serif;
 }
