@@ -15,20 +15,24 @@ return (
     <div className="login-form">
         <h1 className="login-h1">Log In</h1>
         <Form>
-            <Field className="name-box" type="text" name="name" placeholder="Name" />
-            {touched.name && errors.name && ( <p className="error">{errors.name}</p>)}
+            <div>
+                <Field className="name-box" type="text" name="name" placeholder="Name" />
+                {touched.name && errors.name && ( <p className="error">{errors.name}</p>)}
 
-            <Field className="email-box" type="text" name="email" placeholder="Email" /> 
-            {touched.email && errors.email && ( <p className="error">{errors.email}</p>)} 
+                <Field className="email-box" type="text" name="email" placeholder="Email" /> 
+                {touched.email && errors.email && ( <p className="error">{errors.email}</p>)} 
 
-            <Field className="password-box" type="password" name="password" placeholder="Password" /> 
-            {touched.password && errors.password && ( <p className="error">{errors.password}</p>)} 
+                <Field className="password-box" type="password" name="password" placeholder="Password" /> 
+                {touched.password && errors.password && ( <p className="error">{errors.password}</p>)} 
+            </div>
 
-            <button className="login-button">Log In</button>
+                <button className="login-button">Log In</button>
 
-            <label>
+            <div>
+            <label className="sign-up-call">
                 Don't have an account? <a href="#"><button className="sign-up-button">Sign Up</button></a>
             </label>
+            </div>
         </Form>
         {user.map(users => (
             <ul key={users.id}>
