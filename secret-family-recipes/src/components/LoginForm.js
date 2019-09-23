@@ -24,6 +24,10 @@ return (
             {touched.password && errors.password && ( <p className="error">{errors.password}</p>)} 
 
             <button>Log In</button>
+
+            <label>
+                Don't have an account? <a href="#"><button className="sign-up-button">Sign Up</button></a>
+            </label>
         </Form>
         {user.map(users => (
             <ul key={users.id}>
