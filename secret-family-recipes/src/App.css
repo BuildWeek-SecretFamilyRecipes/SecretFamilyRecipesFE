@@ -55,3 +55,13 @@ nav {
   color: #FFFF;
   font-family: 'Crimson Text', serif;
 }
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 460px;
+  height: 400px;
+  background-color: rgba(211, 82, 105);
+  margin-left: 38%; /* would love to use flexbox to center this, not sure how */
+}
+

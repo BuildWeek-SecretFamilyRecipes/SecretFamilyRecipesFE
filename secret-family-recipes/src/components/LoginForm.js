@@ -13,17 +13,18 @@ const LoginForm = ({ errors, touched, status }) => {
 
 return (
     <div className="login-form">
+        <h1 className="login-h1">Log In</h1>
         <Form>
-            <Field type="text" name="name" placeholder="Name" />
+            <Field className="name-box" type="text" name="name" placeholder="Name" />
             {touched.name && errors.name && ( <p className="error">{errors.name}</p>)}
 
-            <Field type="text" name="email" placeholder="Email" /> 
+            <Field className="email-box" type="text" name="email" placeholder="Email" /> 
             {touched.email && errors.email && ( <p className="error">{errors.email}</p>)} 
 
-            <Field type="password" name="password" placeholder="Password" /> 
+            <Field className="password-box" type="password" name="password" placeholder="Password" /> 
             {touched.password && errors.password && ( <p className="error">{errors.password}</p>)} 
 
-            <button>Log In</button>
+            <button className="login-button">Log In</button>
 
             <label>
                 Don't have an account? <a href="#"><button className="sign-up-button">Sign Up</button></a>
