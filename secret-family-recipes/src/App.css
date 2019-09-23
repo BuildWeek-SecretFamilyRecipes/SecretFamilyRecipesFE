@@ -125,3 +125,9 @@ nav {
   background: #D35269;
   color: #FFFF;
 }
+
+.error {
+  margin: auto;
+  position: relative;
+  background: #09d3ac; /* trying to get error messages to not move my box */
+}
