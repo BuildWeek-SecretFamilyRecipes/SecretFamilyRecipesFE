@@ -31,7 +31,7 @@ const Header = styled.header`
 	height: 45px;
 	width: 1265px;
 	font-family:'Crimson Text', serif;
-	background-color: #D35269;
+	background-color: #F1DABF;
 	@media (max-width: 1265px) {
 		width: 100%;
 	}
@@ -86,9 +86,9 @@ const MenuBar = styled.div`
 
 const NavP = styled.p`
 	padding: 0 25px;
-	color: white;
+	color: #D35269;
 	:hover {
-		color: #a00000;
+		color: #FFFF;
 	}
 	@media (max-width: 500px) {
 		font-size: 15px;
@@ -129,7 +129,7 @@ const MainContent = styled.div`
 const Footer = styled.footer`
 	height: 45px;
 	width: 1265px;
-	background-color: #D35269;
+	background-color: #F1DABF;
 	margin-top: 50px;
 	@media (max-width: 1265px) {
 		width: 100%;

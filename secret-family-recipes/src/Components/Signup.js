@@ -9,7 +9,6 @@ const Input = styled.input`
 	width: 260px;
 	height: 35px;
 	margin: 5px 0;
-	background: transparent;
 	font-size: 13px;
 	border-style: none;
 	border-bottom: #6d748c 1px solid;
@@ -44,15 +43,13 @@ const Button = styled.button`
 	width: 260px;
 	height: 35px;
 	margin: 5px 0;
-	font-size: 15px;
 	font-weight: bold;
 	font-family:'Crimson Text', serif;
 	background: #FFFFFF;
 	color: #2E0014;
-	font-size: 15px;
+	font-size: 20px;
 	outline: none;
 	:hover {
-		background-color: #d35269;
 		color: #6d748c;
 		border: 2px solid #6d748c;
 	}

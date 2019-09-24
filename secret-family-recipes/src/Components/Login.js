@@ -18,6 +18,7 @@ const Input = styled.input`
 `
 
 const LoginForm = styled.div`
+	color: #2E0014;
 	width: 400px;
 	margin: 50px auto;
 	height: 300px;
@@ -50,9 +51,9 @@ const Button = styled.button`
 	font-size: 20px;
 	outline: none;
 	:hover {
-		background-color: white;
-		color: #6d748c;
-		border: 2px solid #6d748c;
+		background-color: #D35269;
+		color: #2E0014;
+		border: 2px solid #2E0014;
 	}
 `
 
