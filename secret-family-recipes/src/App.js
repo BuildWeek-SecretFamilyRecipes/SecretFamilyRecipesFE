@@ -6,6 +6,7 @@ import Login from './Components/Login'
 import PrivateRoute from './Components/PrivateRoute'
 import { connect } from 'react-redux'
 import Signup from './Components/Signup'
+import RecipeList from './Components/RecipeList';
 
 // @tablet: (max-width: 800px)
 // @phone: (max-width: 500px)
@@ -197,6 +198,7 @@ class App extends React.Component {
 
 					<Route path='/login' component={Login} />
 					<Route path='/signup' component={Signup} />
+					<PrivateRoute path='/recipes' component={RecipeList} />
 					{/* <PrivateRoute exact path='/' component={Home} /> */}
 				</MainContent>
 				<Footer>

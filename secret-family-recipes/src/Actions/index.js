@@ -12,7 +12,7 @@ export const GET_RECIPES_START = 'GET_RECIPES_START'
 export const GET_RECIPES_SUCCESS = 'GET_RECIPES_SUCCESS'
 export const GET_RECIPES_FAILURE = 'GET_RECIPES_FAILURE'
 
-const baseEndpoint = 'https://secretfamilyrecipe.herokuapp.com/api'
+const baseEndpoint = 'https://secretfamilyrecipe.herokuapp.com/'
 
 export const registerUser = (newUser) => (dispatch) => {
 	console.log('hi', newUser)
@@ -21,7 +21,7 @@ export const registerUser = (newUser) => (dispatch) => {
 	})
 	return axios
 		.post(
-			'https://secretfamilyrecipe.herokuapp.com/api/auth/register',
+			'localhost:4000/api/auth/register',
 			newUser
 		)
 		.then((res) => {
@@ -44,7 +44,7 @@ export const loginUser = (user) => (dispatch) => {
 		type: LOGIN_USER_START
 	})
 	return axios
-		.post('https://secretfamilyrecipe.herokuapp.com/api/auth/login', user)
+		.post('localhost:4000/api/auth/login', user)
 		.then((res) => {
 			dispatch({
 				type: LOGIN_USER_SUCCESS,
@@ -64,4 +64,8 @@ export const getRecipes = () => dispatch => {
 	dispatch({
 		type: GET_RECIPES_START
 	})
+}
+
+export const search = query => {
+	console.log('search (stub)')
 }

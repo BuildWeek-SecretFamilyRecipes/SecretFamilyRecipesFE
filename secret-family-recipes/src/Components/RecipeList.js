@@ -12,7 +12,7 @@ const RecipeLists = styled.div`
     flex-wrap      : wrap;
     `;
 
-    const Quote = styled.div`
+const Quote = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,11 +42,11 @@ class RecipeList extends React.Component {
         return (
             <div>
 
-        <div className='main-image'>
-          <Quote>
-            <p></p>
-          </Quote>
-        </div>
+                <div className='main-image'>
+                    <Quote>
+                        <p></p>
+                    </Quote>
+                </div>
                 <SearchBar />
                 <RecipeLists>
                     {recipesToDisplay.map(recipe => <Recipe recipe={recipe} />)}
@@ -58,8 +58,8 @@ class RecipeList extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-    recipes: state.recipes,
-    filteredRecipes: state.filteredRecipes,
+    recipes: state.recipes || [],
+    filteredRecipes: state.filteredRecipes || [],
     token: state.token
 })
 

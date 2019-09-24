@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { search } from '../Actions';
 import styled from 'styled-components';
-import { ReactComponent as MagnifyingGlass } from './Image/search.svg';
+// import { ReactComponent as MagnifyingGlass } from './img/search.svg';
 
 const InputDiv = styled.div`
 width: 350px;
@@ -50,7 +50,7 @@ class SearchBar extends React.Component {
                     <Titleh2>Recipes</Titleh2></div>
                 <InputDiv>
                 <MagnifyingGlassDiv>
-                        <MagnifyingGlass />
+                        {/* <MagnifyingGlass /> */}
                     </MagnifyingGlassDiv>
                     <Input className='searchBarInput'
                         placeholder="Search for Recipes..."
