@@ -30,7 +30,7 @@ class RecipeList extends React.Component {
     }
 
     render() {
-        this.props.getRecipes();
+        this.props.getRecipes(); //redundant?
         console.log(this.props)
         let recipesToDisplay = [];
         if (this.props.filteredRecipes.length > 0) {
