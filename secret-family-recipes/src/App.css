@@ -84,6 +84,7 @@ nav {
   width: 75%;
   padding: 1.5%;
   font-size: 16px;
+  margin: auto;
   margin-bottom: 5%;
 }
 
@@ -91,6 +92,7 @@ nav {
   width: 75%;
   padding: 1.5%;
   font-size: 16px;
+  margin: auto;
   margin-bottom: 5%;
 }
 
@@ -98,7 +100,8 @@ nav {
   width: 75%;
   padding: 1.5%;
   font-size: 16px;
-  margin-bottom: 7%;
+  margin: auto;
+  margin-bottom: 5%;
 }
 
 .login-button{
@@ -128,7 +131,17 @@ nav {
 }
 
 .error {
-  margin: auto;
-  position: relative;
-  background: #09d3ac; /* trying to get error messages to not move my box */
+  margin-top: -5%;
+  color: #FFFF;
+  font-weight: bold;
 }
+
+.boxes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+

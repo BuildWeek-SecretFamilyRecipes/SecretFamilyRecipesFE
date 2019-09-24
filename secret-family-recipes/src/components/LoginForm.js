@@ -15,7 +15,7 @@ return (
     <div className="login-form">
         <h1 className="login-h1">Log In</h1>
         <Form>
-            <div>
+            <div className="boxes">
                 <Field className="name-box" type="text" name="name" placeholder="Name" />
                 {touched.name && errors.name && ( <p className="error">{errors.name}</p>)}
 
