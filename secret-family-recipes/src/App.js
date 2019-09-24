@@ -86,7 +86,7 @@ const MenuBar = styled.div`
 
 const NavP = styled.p`
 	padding: 0 25px;
-	color: #D35269;
+	color: #2E0014;
 	:hover {
 		color: #FFFF;
 	}

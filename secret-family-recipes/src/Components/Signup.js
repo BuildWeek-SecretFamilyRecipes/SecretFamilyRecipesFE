@@ -50,8 +50,9 @@ const Button = styled.button`
 	font-size: 20px;
 	outline: none;
 	:hover {
-		color: #6d748c;
-		border: 2px solid #6d748c;
+		background-color: #558B6E;
+		color: #2E0014;
+		border: 2px solid #2E0014;
 	}
 `
 
