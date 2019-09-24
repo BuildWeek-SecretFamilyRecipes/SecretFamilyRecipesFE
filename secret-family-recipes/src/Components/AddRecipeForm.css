@@ -1,5 +1,5 @@
 .imageAdd {
-    background-image: url('C:\Users\Tyler\Documents\git\SecretFamilyRecipesFE\secret-family-recipes\src\img\girl-cooking.jpg');
+    background-image: url('../img/girl-cooking.jpg');
     background-size : cover;
     resize          : both;
     overflow        : scroll;

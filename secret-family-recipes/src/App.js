@@ -15,7 +15,7 @@ const AppDiv = styled.div`
 	max-width: 1265px;
 	height: 100%;
 	margin: 0 0;
-	font-family: 'Cherry Swash', cursive;
+	font-family:'Crimson Text', serif;
 	@media (max-width: 1265px) {
 		width: 100%;
 	}
@@ -30,7 +30,7 @@ const Header = styled.header`
 	align-items: center;
 	height: 45px;
 	width: 1265px;
-	font-family: 'Mitr', sans-serif;
+	font-family:'Crimson Text', serif;
 	background-color: #D35269;
 	@media (max-width: 1265px) {
 		width: 100%;
@@ -44,14 +44,14 @@ const Header = styled.header`
 		justify-content: center;
 	}
 `
-
-const SubHeader = styled.header`
+// going to change the color to white once it's in the NavBar
+const SubHeader = styled.header` 
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-size: 25px;
 	margin: 20px;
-	color: #558B6E;
+	color: #2E0014; 
 	@media (max-width: 800px) {
 		font-size: 20px;
 		justify-content: center;

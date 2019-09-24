@@ -23,6 +23,7 @@ const LoginForm = styled.div`
 	margin: 50px auto;
 	height: 300px;
 	display: flex;
+	font-family: 'Crimson Text', serif;
 	flex-direction: column;
 	align-items: center;
 	border: 1px solid lightgrey;
@@ -45,7 +46,7 @@ const Button = styled.button`
 	margin: 5px 0;
 	font-size: 15px;
 	font-weight: bold;
-	font-family: 'Nunito', sans-serif;
+	font-family:'Crimson Text', serif;
 	background: #FFFFFF;
 	color: #2E0014;
 	font-size: 15px;

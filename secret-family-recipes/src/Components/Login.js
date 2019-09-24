@@ -9,7 +9,6 @@ const Input = styled.input`
 	width: 260px;
 	height: 35px;
 	margin: 5px 0;
-	background: transparent;
 	font-size: 13px;
 	border-style: none;
 	border-bottom: #6d748c 1px solid;
@@ -23,6 +22,7 @@ const LoginForm = styled.div`
 	margin: 50px auto;
 	height: 300px;
 	display: flex;
+	font-family: 'Crimson Text', serif;
 	flex-direction: column;
 	align-items: center;
 	border: 1px solid lightgrey;
@@ -43,12 +43,11 @@ const Button = styled.button`
 	width: 260px;
 	height: 35px;
 	margin: 5px 0;
-	font-size: 15px;
 	font-weight: bold;
-	font-family: 'Nunito', sans-serif;
-	background: #558b6e;
-	color: white;
-	font-size: 15px;
+	font-family: 'Crimson Text', serif;
+	background: #FFFF;
+	color: #D35269;
+	font-size: 20px;
 	outline: none;
 	:hover {
 		background-color: white;

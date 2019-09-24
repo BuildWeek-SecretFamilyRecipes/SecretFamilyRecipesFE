@@ -1,7 +1,8 @@
 .imageSignup {
-    background-image: url('C:\Users\Tyler\Documents\git\SecretFamilyRecipesFE\secret-family-recipes\src\img\eggs.jpg');
-    background-size : cover;
-    resize          : both;
+    background-image: url('.././img/eggs.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* resize          : both; */
     overflow        : scroll;
     opacity         : 0.8;
     margin-top      : 50px;

@@ -54,7 +54,7 @@ const EachInput = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   font-weight: bold;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Crimson Text', serif;
 font-size: 15px;
 margin: 10px;
 @media (max-width: 500px) {
