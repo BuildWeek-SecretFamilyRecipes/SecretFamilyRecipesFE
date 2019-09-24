@@ -10,15 +10,17 @@
 // // unregister() to register() below. Note this comes with some pitfalls.
 // // Learn more about service workers: https://bit.ly/CRA-PWA
 // serviceWorker.unregister();
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
+import App from './App'
 
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-
-
-ReactDOM.render(<App />, document.getElementById('root'));
-
-
+ReactDOM.render(
+	<Router>
+		<App />
+	</Router>,
+	document.getElementById('root')
+)
 
 
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Barriecito&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:600|Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lato:300');
 
@@ -9,11 +9,13 @@
 body {
 	margin: 0;
 	padding: 0;
-	background: rgb(214, 212, 212);
+	background: linear-gradient(to right, #606c88, #3f4c6b);
+	height: 100vh;
+	width: 100vw;
 	font-family: Georgia, sans-serif;
 	font-size: 16px;
 	line-height: 1.5;
-	color: black;
+	color: #fff;
 }
 
 a {
@@ -32,7 +34,7 @@ h1 {
 p {
 	font-family: 'Saira Extra Condensed', sans-serif;
 	font-size: 1.3em;
-	color: #000;
+	color: #fff;
 	letter-spacing: 0.05em;
 	margin-bottom: 2%;
 }
@@ -65,7 +67,9 @@ span {
 }
 
 .windmill {
-	margin-top: 1em;
+	position: absolute;
+	bottom: -20px;
+	left: 36%;
 }
 
 @media (min-width: 500px) {

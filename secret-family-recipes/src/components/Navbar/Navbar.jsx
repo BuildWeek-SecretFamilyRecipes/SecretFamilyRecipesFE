@@ -1,57 +1,62 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Navbar.css'
 
-function Nav() {
+function Navbar() {
 	return (
-		<div id='nav-container'>
-			{/* <img
-				src={IMG}
-				style={{ width: '200px', float: 'left', clear: 'both' }}
-				alt='logo'></img> */}
-			<nav>
-				<ul id='menu'>
-					<li>
-						<a>MEMBERS AREA</a>
-						<ul>
-							<li>
-								<a>VIEW RECIPES</a>
-							</li>
-							<li>
-								<a>DELETE RECIPES</a>
-							</li>
-							<li>
-								<a>EDIT RECIPES</a>
-							</li>
-							<li>
-								<a>CREATE RECIPES</a>
-							</li>
-						</ul>
+		<header class='page-header'>
+			<input id='menu-toggle-input' type='checkbox' />
+			<label class='menu-toggle' for='menu-toggle-input'>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</label>
+			<nav className='menu'>
+				<ol>
+					<li className='menu-item'>
+						<a href='/'>HOME</a>
 					</li>
-					<li>
-						<a>About Us</a>
+					<li className='menu-item'>
+						<a href='/'>ABOUT</a>
 					</li>
-					<li>
-						<a>Contact Us</a>
+					<li className='menu-item'>
+						<a href='/'>RECIPES</a>
+						<ol className='sub-menu'>
+							<li className='menu-item'>
+								<a href='/'>VIEW RECIPES</a>
+							</li>
+							<li className='menu-item'>
+								<a href='/'>EDIT RECIPES</a>
+							</li>
+							<Link to={`/addrecipe`} className='nav-link'>
+								<li>ADD A RECIPE</li>
+							</Link>
+						</ol>
 					</li>
-					<li>
-						<a>RECIPES</a>
-						<ul>
-							<li>
-								<a>VIEW RECIPES</a>
+					<li className='menu-item'>
+						<a href='/'>MEMBERS ENTRANCE</a>
+						<ol className='sub-menu'>
+							<li className='menu-item'>
+								<a href='/'>SIGN IN</a>
 							</li>
-							<li>
-								<a>DELETE RECIPES</a>
+							<li className='menu-item'>
+								<a href='/'>SIGN UP</a>
 							</li>
-							<li>
-								<a>EDIT RECIPES</a>
+							<li className='menu-item'>
+								<a href='/'>SIGN OUT</a>
 							</li>
-						</ul>
+						</ol>
 					</li>
-					<div id='lavalamp'></div>
-				</ul>
+					<li className='menu-item'>
+						<a href='/'>CONTACT</a>
+					</li>
+				</ol>
 			</nav>
-		</div>
+		</header>
 	)
 }
 
-export default Nav
+export default Navbar

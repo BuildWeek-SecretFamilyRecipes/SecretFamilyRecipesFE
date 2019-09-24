@@ -1,5 +1,6 @@
 import React from 'react'
 import './HomePage.css'
+
 import Navbar from '../Navbar/Navbar'
 import '../Navbar/Navbar.css'
 
@@ -7,6 +8,7 @@ function HomePage() {
 	return (
 		<div className='home-container'>
 			<Navbar />
+
 			<section className='welcome'>
 				<script type='text/javascript' />
 
@@ -18,7 +20,7 @@ function HomePage() {
 					resource that helps home cooks around the globe discover
 					and share the joy of cooking. We do this through
 					community-driven content, products, and services that
-					energize home cooks and your need to hang onto this old recipes from granny. To get started
+					energize home cooks and fuel your need to hang onto the old recipes from granny. To get started
 					please create an account and then sign in. From our family
 					to yours we hope you enjoy your stay.
 				</p>
@@ -30,11 +32,11 @@ function HomePage() {
 					viewBox='0 0 504 506'>
 					<title>welcome-animation</title>
 					<g id='Static'>
-						<g id='Concrete'>
+						{/* <g id='Concrete'>
 							<rect
 								x='-0.61'
 								y='482.73'
-								width='51.58'
+								width='99.58'
 								height='22.95'
 								style={{ fill: '#f0f0f0' }}
 							/>
@@ -52,7 +54,7 @@ function HomePage() {
 								height='22.95'
 								style={{ fill: '#f0f0f0' }}
 							/>
-						</g>
+						</g> */}
 						<g id='trees'>
 							<path
 								d='M380.73,382.68a31.27,31.27,0,0,0-62.33,1.21,31.88,31.88,0,0,0-19.85,30.25c.29,16.9,13.7,30.77,30.3,31.3a30.67,30.67,0,0,0,6.32-.44,95,95,0,0,1,32.44,0,31.77,31.77,0,0,0,5.46.45c17.35-.1,31.58-15,31.15-32.7A31.78,31.78,0,0,0,380.73,382.68Z'
@@ -83,7 +85,7 @@ function HomePage() {
 							<rect
 								x='49.8'
 								y='472.63'
-								width='74.07'
+								width='190.07'
 								height='3.37'
 								style={{ fill: '#8dd3c5' }}
 							/>
