@@ -22,7 +22,7 @@ export const registerUser = (newUser) => (dispatch) => {
 	})
 	return axios
 		.post(
-			'localhost:4000/api/auth/register',
+			'https://secretfamilyrecipe.herokuapp.com/api/auth/register',
 			newUser
 		)
 		.then((res) => {
@@ -45,7 +45,7 @@ export const loginUser = (user) => (dispatch) => {
 		type: LOGIN_USER_START
 	})
 	return axios
-		.post('localhost:4000/api/auth/login', user)
+		.post('https://secretfamilyrecipe.herokuapp.com/api/auth/login', user)
 		.then((res) => {
 			dispatch({
 				type: LOGIN_USER_SUCCESS,
@@ -60,17 +60,17 @@ export const loginUser = (user) => (dispatch) => {
 		})
 }
 
-export const getRecipes = () => dispatch => {
+export const getRecipes = () => (dispatch) => {
 	console.log('getRecipes called')
 	dispatch({
 		type: GET_RECIPES_START
 	})
 	return axiosWithAuth()
-	.get(`localhost:4000/api/users/:user_id/recipes`)
+	.get(`https://secretfamilyrecipe.herokuapp.com/api/users/:user_id/recipes`)
 	.then(console.log)
 	.catch(console.log)
 }
 
-export const search = query => {
+export const search = (query) => {
 	console.log('search (stub)')
 }
