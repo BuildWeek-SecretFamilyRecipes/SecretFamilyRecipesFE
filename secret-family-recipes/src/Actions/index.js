@@ -1,4 +1,5 @@
 import axios from 'axios'
+import axiosWithAuth from '../Utils/axiosWithAuth'
 
 export const REGISTER_USER_START = 'REGISTER_USER_START'
 export const REGISTER_USER_SUCCESS = 'REGISTER_USER_SUCCESS'
@@ -64,6 +65,10 @@ export const getRecipes = () => dispatch => {
 	dispatch({
 		type: GET_RECIPES_START
 	})
+	return axiosWithAuth()
+	.get(`localhost:4000/api/users/:user_id/recipes`)
+	.then(console.log)
+	.catch(console.log)
 }
 
 export const search = query => {
