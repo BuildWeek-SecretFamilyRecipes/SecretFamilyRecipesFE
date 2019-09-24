@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Barriecito&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:300');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: rgb(214, 212, 212);
+	font-family: Georgia, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	color: black;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1 {
+	font-weight: normal;
+	font-family: 'Barriecito', cursive;
+	font-size: 56px !important;
+	margin-bottom: 1%;
+	line-height: 1.5;
+	letter-spacing: 0.01em;
+}
+
+p {
+	font-family: 'Saira Extra Condensed', sans-serif;
+	font-size: 1.3em;
+	color: #000;
+	letter-spacing: 0.05em;
+	margin-bottom: 2%;
+}
+
+span {
+	color: #c94397;
+}
+
+.welcome {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.logo {
+	display: inline-block;
+	width: 90%;
+	max-width: 300px;
+}
+
+/* img {
+	display: block;
+	width: 100%;
+	height: auto;
+} */
+
+.version {
+	margin-top: 40px;
+}
+
+.windmill {
+	margin-top: 1em;
+}
+
+@media (min-width: 500px) {
+	h1 {
+		font-size: 38px;
+	}
+}
+
+@media (min-width: 700px) {
+	h1 {
+		font-size: 50px;
+	}
+}
+
+@media (min-width: 500px) {
+	#animation {
+		display: flex;
+		align-content: center;
+		width: 38px;
+	}
+}
+
+.windmill-wheel {
+	transform-origin: 422.31px 384.69px;
+	animation: rotation 7s infinite linear;
+}
+
+@keyframes rotation {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(359deg);
+	}
+}
+
+#green-cloud {
+	animation: floating linear 2s alternate infinite;
+}
+
+@keyframes floating {
+	100% {
+		transform: translateX(2px);
+	}
+}
