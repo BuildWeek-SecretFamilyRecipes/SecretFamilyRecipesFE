@@ -52,8 +52,8 @@ header:before {
 			rgba(84, 249, 227, 0.3),
 			rgba(255, 91, 184, 0.5)
 		),
-		url('https://www.windsorballroom.com/wp-content/uploads/2019/01/2018-02-27TuscanyTable025.jpg'); */
-	background-color: #cccccc;
+		url(''); */
+	background-color: #F1DABF;
 	background-attachment: fixed;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -78,9 +78,7 @@ header:before {
 		background-color: rgba(255, 255, 255, 0);
 	}
 }
-header .container {
-	margin: 12rem auto;
-}
+
 header h1 {
 	border-bottom: 2px solid #ffffff;
 	border-top: 2px solid #ffffff;
@@ -117,14 +115,13 @@ section p.lead-in:first-letter {
 	top: -0.2em;
 }
 
-nav {
+header {
 	display: flex;
-	justify-content: flex-end;
 }
 
-nav h1 {
-	align-self: flex-start;
-	background-color: red
+nav {
+	display: flex;
+	justify-content: space-evenly;
 }
 
 /* background: rgba(84, 249, 227, 1);

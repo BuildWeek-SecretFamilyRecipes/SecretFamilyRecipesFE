@@ -24,46 +24,46 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<Route
-					path={['/recipes', '/addRecipe', '/editRecipe']}
-					render={() => (
-						<nav>
-							<h1>Secret Family Recipes</h1>
-							<NavLink
-								to='/recipes'
-							>All Recipes</NavLink>
-							<NavLink
-								to='/addRecipe'
-							>Add Recipe</NavLink>
-							<a onClick={(event) => this.logout()}>Log Out</a>
-						</nav>
-					)}
-				/>
-				<Route
-					exact
-					path='/login'
-					render={() => (
-						<nav>
-						<h1>Recipe Vault</h1>
-							<NavLink
-								to='/signup'
-							>Sign Up</NavLink>
-						</nav>
-					)}
-				/>
-				<Route
-					exact
-					path='/signup'
-					render={() => (
-						<nav>
-						<h1>Recipe Vault</h1>
-							<NavLink
-								to='/login'
-							>Log In</NavLink>
-						</nav>
-					)}
-				/>
+			<>
+				<header>
+					<h1>Secret Family Recipes</h1>
+					<Route
+						path={['/recipes', '/addRecipe', '/editRecipe']}
+						render={() => (
+							<nav>
+								<NavLink
+									to='/recipes'
+								>All Recipes</NavLink>
+								<NavLink
+									to='/addRecipe'
+								>Add Recipe</NavLink>
+								<a onClick={(event) => this.logout()}>Log Out</a>
+							</nav>
+						)}
+					/>
+					<Route
+						exact
+						path='/login'
+						render={() => (
+							<nav>
+								<NavLink
+									to='/signup'
+								>Sign Up</NavLink>
+							</nav>
+						)}
+					/>
+					<Route
+						exact
+						path='/signup'
+						render={() => (
+							<nav>
+								<NavLink
+									to='/login'
+								>Log In</NavLink>
+							</nav>
+						)}
+					/>
+				</header>
 
 				<Route path='/login' component={Login} />
 				<Route path='/signup' component={Signup} />
@@ -97,7 +97,7 @@ class App extends React.Component {
 							<Redirect from="/" to="/login" />
 						)
 				}
-			</div>
+			</>
 		)
 	}
 }
