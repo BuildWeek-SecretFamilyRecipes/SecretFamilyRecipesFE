@@ -3,7 +3,7 @@ import './App.css'
 import RecipeList from './Components/RecipeList'
 import AddRecipeForm from './Components/AddRecipeForm'
 import RecipeDetails from './Components/RecipeDetails'
-import { Route, Link, Redirect } from 'react-router-dom'
+import { Route, Link, NavLink, Redirect } from 'react-router-dom'
 import EditRecipeForm from './Components/EditRecipeForm'
 import styled from 'styled-components'
 import Login from './Components/Login'
@@ -157,127 +157,188 @@ class App extends React.Component {
 
 	logout = () => {
 		localStorage.removeItem('token')
+		localStorage.removeItem('user_id')
 		window.location.href = '/login'
 	}
 
 	render() {
 		return (
-			<header>
-				<div>
-					{localStorage.getItem('token') ? null : (
-						<Link
+			<div>
+
+
+				{/* {localStorage.getItem('token') ? null : (
+					<Link
 						to='/login'
 						style={{
 							textDecoration: 'none',
 							color: 'orange',
 							fontSize: '50px'
 						}}>
+						<NavP> LOG IN </NavP>
+					</Link>
+				)}
+				{localStorage.getItem('token') ? null : (
+					<Link
+						to='/signup'
+						style={{ textDecoration: 'none', color: 'orange' }}>
+						<NavP> SIGN UP </NavP>
+					</Link>
+				)}
+				{localStorage.getItem('token') ? (
+					<NavP onClick={(event) => this.logout()}> LOG OUT</NavP>
+				) : null}
+				<div class='container'>
+					<h1>-Save Recipes That Matter-</h1>
+					<h3>You'll never regret it.</h3>
+				</div>
+				<Header>
+					{localStorage.getItem('token') ? null : (
+						<Link
+							to='/login'
+							style={{
+								textDecoration: 'none',
+								color: 'orange'
+							}}>
 							<NavP> LOG IN </NavP>
 						</Link>
 					)}
-
 					{localStorage.getItem('token') ? null : (
 						<Link
-						to='/signup'
-						style={{ textDecoration: 'none', color: 'orange' }}>
+							to='/signup'
+							style={{
+								textDecoration: 'none',
+								color: 'orange'
+							}}>
 							<NavP> SIGN UP </NavP>
 						</Link>
 					)}
-
 					{localStorage.getItem('token') ? (
-						<NavP onClick={(event) => this.logout()}> LOG OUT</NavP>
+						<NavP onClick={(event) => this.logout()}>
+							{' '}
+							LOG OUT{' '}
+						</NavP>
 					) : null}
-					<div class='container'>
-						<h1>-Save Recipes That Matter-</h1>
-						<h3>You'll never regret it.</h3>
-					</div>
-
-					<Header>
-						{localStorage.getItem('token') ? null : (
-							<Link
-								to='/login'
-								style={{
-									textDecoration: 'none',
-									color: 'orange'
-								}}>
-								<NavP> LOG IN </NavP>
-							</Link>
-						)}
-
-{localStorage.getItem('token') ? null : (
-							<Link
-								to='/signup'
-								style={{
-									textDecoration: 'none',
-									color: 'orange'
-								}}>
-								<NavP> SIGN UP </NavP>
-							</Link>
-						)}
-						{localStorage.getItem('token') ? (
-							<NavP onClick={(event) => this.logout()}>
-								{' '}
-								LOG OUT{' '}
-							</NavP>
-						) : null}
-					</Header>
-					<MainContent>
-						<SubHeader>
-							<h1>Secret Family Recipes</h1>
-						</SubHeader>
-						<MenuBar>
-							<Link
-								to='/recipes'
-								style={{
-									textDecoration: 'none',
-									color: 'orange'
-								}}>
-								<MenuP>View Recipes</MenuP>
-							</Link>
-							<Link
-								to='/addRecipe'
-								style={{
-									textDecoration: 'none',
-									color: 'orange'
-								}}>
-								<MenuP>Add Recipe</MenuP>
-							</Link>
-						</MenuBar>
-						<Route path='/login' component={Login} />
-						<Route path='/signup' component={Signup} />
+				</Header>
+				<MainContent>
+					<SubHeader>
+						<h1>Recipe Vault</h1>
+					</SubHeader>
+					<MenuBar>
 						<Route
-							exact
-							path='/recipes/share/:id'
-							component={RecipeDetails}
+							path='/login'
+							render={() => (
+								<Link to='/signup'>
+									<NavP> SIGN UP </NavP>
+								</Link>
+							)}
 						/>
-						<PrivateRoute
-							exact
-							path='/recipes'
-							component={RecipeList}
+						<Route
+							path='/signup'
+							render={() => (
+								<Link to='/login'>
+									<NavP> LOG IN </NavP>
+								</Link>
+							)}
 						/>
-						<PrivateRoute
-							exact
-							path='/recipes/:id'
-							component={RecipeDetails}
+						<Route
+							path='/login'
+							render={() => (
+								<Link to='/signup'>
+									<NavP> SIGN UP </NavP>
+								</Link>
+							)}
 						/>
-						<PrivateRoute
-							path='/addRecipe'
-							component={AddRecipeForm}
-						/>
-						<PrivateRoute
-							path='/editRecipe/:id'
-							component={EditRecipeForm}
-						/>
-						{
-							localStorage.getItem('token') ? (
-								<Redirect from="/" to="/recipes" />
-							) : (
-								<Redirect from="/" to="/login" />
-							)
-						}
-					</MainContent>
-				</div>
-			</header>
+						<Link
+							to='/recipes'
+							style={{
+								textDecoration: 'none',
+								color: 'orange'
+							}}>
+							<MenuP>View Recipes</MenuP>
+						</Link>
+						<Link
+							to='/addRecipe'
+							style={{
+								textDecoration: 'none',
+								color: 'orange'
+							}}>
+							<MenuP>Add Recipe</MenuP>
+						</Link>
+					</MenuBar> */}
+
+				<Route
+					path={['/recipes', '/addRecipe', '/editRecipe']}
+					render={() => (
+						<nav>
+							<h1>Recipe Vault</h1>
+							<NavLink
+								to='/recipes'
+							>All Recipes</NavLink>
+							<NavLink
+								to='/addRecipe'
+							>Add Recipe</NavLink>
+							<a onClick={(event) => this.logout()}>Log Out</a>
+						</nav>
+					)}
+				/>
+				<Route
+					exact
+					path='/login'
+					render={() => (
+						<nav>
+						<h1>Recipe Vault</h1>
+							<NavLink
+								to='/signup'
+							>Sign Up</NavLink>
+						</nav>
+					)}
+				/>
+				<Route
+					exact
+					path='/signup'
+					render={() => (
+						<nav>
+						<h1>Recipe Vault</h1>
+							<NavLink
+								to='/login'
+							>Log In</NavLink>
+						</nav>
+					)}
+				/>
+
+				<Route path='/login' component={Login} />
+				<Route path='/signup' component={Signup} />
+				<Route
+					exact
+					path='/recipes/share/:id'
+					component={RecipeDetails}
+				/>
+				<PrivateRoute
+					exact
+					path='/recipes'
+					component={RecipeList}
+				/>
+				<PrivateRoute
+					exact
+					path='/recipes/:id'
+					component={RecipeDetails}
+				/>
+				<PrivateRoute
+					path='/addRecipe'
+					component={AddRecipeForm}
+				/>
+				<PrivateRoute
+					path='/editRecipe/:id'
+					component={EditRecipeForm}
+				/>
+				{
+					localStorage.getItem('token') ? (
+						<Redirect from="/" to="/recipes" />
+					) : (
+							<Redirect from="/" to="/login" />
+						)
+				}
+			</div>
 		)
 	}
 }

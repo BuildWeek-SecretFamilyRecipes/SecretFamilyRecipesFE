@@ -83,6 +83,7 @@ class AddRecipeForm extends React.Component {
 	}
 	createRecipe = (event) => {
 		console.log('hi', this.state)
+		console.log('addRecipe fields:', this.state)
 		event.preventDefault()
 
 		this.props.addRecipe(this.state)
