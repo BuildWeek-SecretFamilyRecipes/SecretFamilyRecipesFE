@@ -192,7 +192,7 @@ function reducer(state = initialState, action) {
 			}
 		case LOGIN_USER_SUCCESS:
 			localStorage.setItem('token', action.payload.token)
-			localStorage.setItem('user_id', action.payload.user_id)
+			// localStorage.setItem('user_id', action.payload.user_id)
 			return {
 				...state,
 				loggingIn: false,
