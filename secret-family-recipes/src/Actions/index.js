@@ -1,5 +1,5 @@
 import axios from 'axios'
-import axiosWithAuth from '../Utils/axiosWithAuth'
+import axiosWithAuth from '../Components/axiosWithAuth'
 
 export const ADD_RECIPE_SUCCESS = 'ADD_RECIPE_SUCCESS'
 export const ADD_RECIPE_START = 'ADD_RECIPE_START'
@@ -46,7 +46,7 @@ export const addRecipe = (newRecipe) => (dispatch) => {
 		"this is the newRecipe that I'm sending to the backend",
 		newRecipe
 	)
-	return axios
+	return axiosWithAuth()
 		.post(baseEndpoint + 'new-recipe', newRecipe)
 		.then((res) => {
 			console.log(
@@ -70,7 +70,7 @@ export const deleteRecipe = (id) => (dispatch) => {
 	dispatch({
 		type: DELETE_RECIPE_START
 	})
-	return axios
+	return axiosWithAuth()
 		.delete(baseEndpoint + 'recipes/' + id)
 		.then((res) => {
 			dispatch({
@@ -92,15 +92,17 @@ export const editRecipe = (updatedRecipe) => (dispatch) => {
 	})
 	let id = updatedRecipe.id
 	delete updatedRecipe.id
-	return axios
+	return axiosWithAuth()
 		.put(baseEndpoint + 'recipes/' + id, updatedRecipe)
 		.then((res) => {
+			console.log('UPDATE FAILED LOSER:', res)
 			dispatch({
 				type: EDIT_RECIPE_SUCCESS,
 				payload: res.data
 			})
 		})
 		.catch((err) => {
+			console.log('WOW YOU NEED PROGRAMMING LESSONS', err)
 			dispatch({
 				type: EDIT_RECIPE_FAILURE,
 				payload: err
@@ -113,16 +115,18 @@ export const getRecipe = (id) => (dispatch) => {
 		type: GET_RECIPE_START
 	})
 	return axiosWithAuth()
-		.get(`https://secret-family-recipe.herokuapp.com/api/auth/recipe/${id}`)
+		.get(
+			`https://secret-family-recipe.herokuapp.com/api/auth/find-recipes/${id}`
+		)
 		.then((res) => {
-			console.log('successful get recipe response in ac:', res)
+			console.log('YOU GOT RACIPES BIG BALLA:', res)
 			dispatch({
 				type: GET_RECIPE_SUCCESS,
 				payload: res.data
 			})
 		})
 		.catch((err) => {
-			console.log('getRecipe failure', err)
+			console.log('WOW YOU SUCK', err)
 			dispatch({
 				type: GET_RECIPE_FAILURE,
 				payload: err
@@ -137,14 +141,14 @@ export const getRecipes = () => (dispatch) => {
 	return axiosWithAuth()
 		.get(baseEndpoint + 'recipes')
 		.then((res) => {
-			console.log('getRecipeS success', res)
+			console.log('YOU DONT SUCK', res)
 			dispatch({
 				type: GET_RECIPES_SUCCESS,
 				payload: res.data
 			})
 		})
 		.catch((err) => {
-			console.log('getRecipeS failure', err)
+			console.log('YOU SUCK', err)
 			dispatch({
 				type: GET_RECIPES_FAILURE,
 				payload: err
@@ -181,7 +185,7 @@ export const loginUser = (user) => (dispatch) => {
 	dispatch({
 		type: LOGIN_USER_START
 	})
-	return axios
+	return axiosWithAuth()
 		.post('https://secret-family-recipe.herokuapp.com/api/auth/login', user)
 		.then((res) => {
 			dispatch({
@@ -201,7 +205,7 @@ export const getCategories = () => (dispatch) => {
 	dispatch({
 		type: GET_CATEGORIES_START
 	})
-	return axios
+	return axiosWithAuth()
 		.get(baseEndpoint + 'categories')
 		.then((res) => {
 			dispatch({

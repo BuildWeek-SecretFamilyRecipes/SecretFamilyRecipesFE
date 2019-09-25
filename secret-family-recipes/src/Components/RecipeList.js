@@ -32,8 +32,6 @@ class RecipeList extends React.Component {
 		let recipesToDisplay = []
 		if (this.props.recipes.length > 0) {
 			recipesToDisplay = this.props.recipes
-		} else {
-			recipesToDisplay = this.props.recipes
 		}
 		return (
 			<div>

@@ -99,7 +99,19 @@ class EditRecipeForm extends React.Component {
 		this.setState({
 			id: this.props.match.params.id
 		})
-		this.props.getRecipes(this.props.match.params.id)
+		this.props.getRecipe(this.props.match.params.id)
+		console.log(this.props.match.params.id)
+		if (this.state.id !== this.props.recipe.id) {
+			this.setState({
+				title: this.props.recipe.title,
+				source: this.props.recipe.source,
+				decription: this.props.recipe.description,
+				amount: this.props.recipe.amount,
+				ingredient: this.props.recipe.ingredient,
+				instructions: this.props.recipe.instructions,
+				category: this.props.recipe.category
+			})
+		}
 	}
 
 	handleChange = (event) => {
@@ -120,18 +132,6 @@ class EditRecipeForm extends React.Component {
 	}
 
 	render() {
-		if (this.state.id !== this.props.recipe.id) {
-			this.setState({
-				title: this.props.recipe.title,
-				source: this.props.recipe.source,
-				decription: this.props.recipe.description,
-				amount: this.props.recipe.amount,
-				ingredient: this.props.recipe.ingredient,
-				instructions: this.props.recipe.instructions,
-				category: this.props.recipe.category
-			})
-		}
-
 		return (
 			<div>
 				<div className='editImage'>

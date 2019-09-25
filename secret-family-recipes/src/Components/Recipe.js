@@ -81,7 +81,7 @@ class Recipe extends React.Component {
 					<Category>{this.props.recipe.category}</Category>
 				</TitleAndCategory>
 
-				<Link to={`/recipes/${this.props.recipe}`}>
+				<Link to={`/recipes/${this.props.recipe.id}`}>
 					<Button>Read Recipe</Button>
 				</Link>
 			</EachRecipe>

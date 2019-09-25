@@ -75,6 +75,7 @@ class Recipe extends React.Component {
 	}
 
 	componentDidMount() {
+		console.log('RECIPEPROPS', this.props)
 		this.props.getRecipe(this.props.match.params.id)
 	}
 
