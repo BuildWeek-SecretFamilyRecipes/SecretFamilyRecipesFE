@@ -3,10 +3,10 @@ body {
 	height: 100vh;
 }
 
-/* .main-image {
-    background-image: url('../img/mom-and-daughter.jpg');
+.recipe-cards {
+    background-image: url('../img/more-pie.jpg');
     background-size : cover;
-    resize          : both;
     overflow        : scroll;
-    margin          : 30px 0;
-} */
+    opacity: 0.7;
+    height: 1000px;
+}
