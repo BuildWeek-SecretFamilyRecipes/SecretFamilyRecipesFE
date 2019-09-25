@@ -3,7 +3,7 @@ import './App.css'
 import RecipeList from './Components/RecipeList'
 import AddRecipeForm from './Components/AddRecipeForm'
 import RecipeDetails from './Components/RecipeDetails'
-import { Route, Link } from 'react-router-dom'
+import { Route, Link, Redirect } from 'react-router-dom'
 import EditRecipeForm from './Components/EditRecipeForm'
 import styled from 'styled-components'
 import Login from './Components/Login'
@@ -268,7 +268,13 @@ class App extends React.Component {
 							path='/editRecipe/:id'
 							component={EditRecipeForm}
 						/>
-						{/* <PrivateRoute exact path='/' component={Home} /> */}
+						{
+							localStorage.getItem('token') ? (
+								<Redirect from="/" to="/recipes" />
+							) : (
+								<Redirect from="/" to="/login" />
+							)
+						}
 					</MainContent>
 				</div>
 			</header>
