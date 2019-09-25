@@ -4,8 +4,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import './RecipeDetails.css'
-// import { ReactComponent as EditIcon } from './Image/edit.svg'
-// import { ReactComponent as DeleteIcon } from './Image/trash.svg'
+
 
 const Title = styled.div`
 	display: flex;
@@ -100,7 +99,7 @@ class Recipe extends React.Component {
 									to={`/editRecipe/${this.props.recipe.id}`}>
 									{' '}
 									<Button>
-										{/* <EditIcon /> Edit Recipe */}
+										Edit Recipe
 									</Button>
 								</Link>
 							</div>
@@ -110,7 +109,7 @@ class Recipe extends React.Component {
 										this.deleteRecipe(this.props.recipe.id)
 									}>
 									{' '}
-									{/* <DeleteIcon /> Delete Recipe{' '} */}
+									Delete Recipe
 								</Button>
 							</div>
 						</ButtonDiv>

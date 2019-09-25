@@ -3,7 +3,6 @@
 .eachRecipeImage {
     background-image: url('.././img/skillet.jpg');
     background-size : cover;
-    margin-top      : 50px;
     resize          : both;
     overflow        : scroll;
     opacity         : 0.8;
