@@ -1,5 +1,5 @@
 .editImage {
-    background-image: url('./Image/apple.jpg');
+	background: linear-gradient(to right, #654ea3, #eaafc8);
     background-size : cover;
     margin-top      : 50px;
     resize          : both;
@@ -7,7 +7,7 @@
     opacity         : 0.8;
 }
 
-.ingredientsInput {
+.descriptionInput {
     width: 250px;
     height: 60px;
     border: none;
@@ -22,9 +22,9 @@
     display: block;
 }
 
-.instructionsInput {
+.amountInput {
     width: 250px;
-    height: 60px;
+    height: 40px;
     border: none;
     /* margin: 10px; */
     display: flex;
