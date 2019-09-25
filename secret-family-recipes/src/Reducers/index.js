@@ -29,6 +29,7 @@ import {
 const initialState = {
 	isLoggedIn: false,
 	recipes: [],
+	recipesAccurate: false,
 	filteredRecipes: [],
 	categories: [],
 	addingRecipe: false,
@@ -64,12 +65,15 @@ function reducer(state = initialState, action) {
 			return {
 				...state,
 				fetchingRecipes: false,
-				recipes: action.payload
+				recipes: action.payload,
+				filteredRecipes: action.payload,
+				recipesAccurate: true
 			}
 		case GET_RECIPES_FAILURE:
 			return {
 				...state,
 				fetchingRecipes: false,
+				recipesAccurate: false,
 				error: action.payload
 			}
 		case GET_RECIPE_START:
@@ -78,7 +82,7 @@ function reducer(state = initialState, action) {
 				fetchingRecipe: true
 			}
 		case GET_RECIPE_SUCCESS:
-			console.log('either get the recipe or go hungry: ', action.payload)
+			// console.log('either get the recipe or go hungry: ', action.payload)
 			return {
 				...state,
 				fetchingRecipe: false,
@@ -98,7 +102,8 @@ function reducer(state = initialState, action) {
 		case DELETE_RECIPE_SUCCESS:
 			return {
 				...state,
-				deletingRecipe: false
+				deletingRecipe: false,
+				recipesAccurate: false
 			}
 		case DELETE_RECIPE_FAILURE:
 			return {
@@ -109,7 +114,8 @@ function reducer(state = initialState, action) {
 		case ADD_RECIPE_SUCCESS:
 			return {
 				...state,
-				addingRecipe: true
+				addingRecipe: true,
+				recipesAccurate: false
 			}
 		case ADD_RECIPE_START:
 			return {
@@ -153,7 +159,8 @@ function reducer(state = initialState, action) {
 		case EDIT_RECIPE_SUCCESS:
 			return {
 				...state,
-				editingRecipe: false
+				editingRecipe: false,
+				recipesAccurate: false
 			}
 		case EDIT_RECIPE_FAILURE:
 			return {
@@ -161,6 +168,7 @@ function reducer(state = initialState, action) {
 				editingRecipe: false
 			}
 		case GET_CATEGORIES_START:
+			//note: having specific categories isn't implemented, delete this if it doesn't break anything
 			return {
 				...state,
 				fetchingCategories: true
@@ -183,6 +191,7 @@ function reducer(state = initialState, action) {
 				loggingIn: true
 			}
 		case LOGIN_USER_SUCCESS:
+			localStorage.setItem('token', action.payload.token)
 			localStorage.setItem('user_id', action.payload.user_id)
 			return {
 				...state,

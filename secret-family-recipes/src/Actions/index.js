@@ -211,6 +211,12 @@ export const getCategories = () => (dispatch) => {
 		})
 }
 
-export const search = (query) => {
-	console.log('search (stub)')
+export const search = (query, allItems) => {
+	console.log('search action', query, allItems)
+	const selection = allItems.filter(item => item.category === query);
+	console.log('search selection:', selection)
+	return {
+		type: SEARCH_RECIPE,
+		payload: selection
+	}
 }
