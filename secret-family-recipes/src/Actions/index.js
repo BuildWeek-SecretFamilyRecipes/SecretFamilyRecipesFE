@@ -212,9 +212,13 @@ export const getCategories = () => (dispatch) => {
 }
 
 export const search = (query, allItems) => {
-	console.log('search action', query, allItems)
+	if (query === '') {
+		return {
+			type: SEARCH_RECIPE,
+			payload: allItems
+		}
+	}
 	const selection = allItems.filter(item => item.category === query);
-	console.log('search selection:', selection)
 	return {
 		type: SEARCH_RECIPE,
 		payload: selection

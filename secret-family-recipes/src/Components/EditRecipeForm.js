@@ -87,10 +87,7 @@ class EditRecipeForm extends React.Component {
 	state = {
 		title: '',
 		source: '',
-		description: '',
-		amount: '',
 		ingredient: '',
-		measurement: '',
 		instructions: '',
 		category: ''
 	}
@@ -100,13 +97,11 @@ class EditRecipeForm extends React.Component {
 			id: this.props.match.params.id
 		})
 		this.props.getRecipe(this.props.match.params.id)
-		console.log(this.props.match.params.id)
+		console.log('KKKKKKKK', this.props.match.params.id)
 		if (this.state.id !== this.props.recipe.id) {
 			this.setState({
 				title: this.props.recipe.title,
 				source: this.props.recipe.source,
-				description: this.props.recipe.description,
-				amount: this.props.recipe.amount,
 				ingredient: this.props.recipe.ingredient,
 				instructions: this.props.recipe.instructions,
 				category: this.props.recipe.category
@@ -122,6 +117,7 @@ class EditRecipeForm extends React.Component {
 
 	editRecipe = (event) => {
 		event.preventDefault()
+		console.log('++++++', this.state)
 		this.props.editRecipe(this.state)
 		this.props.history.push(`/recipes/${this.props.match.params.id}`)
 	}
@@ -166,27 +162,43 @@ class EditRecipeForm extends React.Component {
 
 							<EachInput>
 								<div className='items'>
-									<p>DESCRIPTION :</p>
+									<p>INGREDIENTS :</p>
 								</div>
-								<textarea
-									className='decriptionInput'
+								<Input
+									className='input'
 									onChange={this.handleChange}
-									placeholder='description'
-									value={this.state.description}
-									name='description'></textarea>
+									placeholder='ingredients'
+									value={this.state.ingredient}
+									name='ingredient'
+								/>
 							</EachInput>
 
 							<EachInput>
 								<div className='items'>
-									<p>AMOUNT :</p>
+									<p>INSTRUCTIONS :</p>
 								</div>
-								<textarea
-									className='amountInput'
+								<Input
+									className='input'
 									onChange={this.handleChange}
-									placeholder='amount'
-									value={this.state.amount}
-									name='amount'></textarea>
+									placeholder='instructions'
+									value={this.state.instructions}
+									name='instructions'
+								/>
 							</EachInput>
+
+							<EachInput>
+								<div className='items'>
+									<p>CATEGORY :</p>
+								</div>
+								<Input
+									className='input'
+									onChange={this.handleChange}
+									placeholder='category'
+									value={this.state.category}
+									name='category'
+								/>
+							</EachInput>
+
 							<ButtonDiv>
 								<Button
 									className='button'
