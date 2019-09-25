@@ -44,7 +44,7 @@ class RecipeList extends React.Component {
 				</div>
 				<SearchBar />
 				<RecipeLists>
-				{this.props.filteredRecipes ? (
+				{this.props.filteredRecipes.length === 0 ? (
 						<h2>no recipes</h2>
 					) : this.props.filteredRecipes.map((recipe) => (
 						<Recipe recipe={recipe} />
@@ -57,7 +57,7 @@ class RecipeList extends React.Component {
 
 const mapStateToProps = (state) => ({
 	recipes: state.recipes || [],
-	filteredRecipes: state.filteredRecipes,
+	filteredRecipes: state.filteredRecipes || [],
 	upToDate: state.recipesAccurate,
 	token: state.token
 })
