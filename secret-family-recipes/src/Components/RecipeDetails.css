@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Crimson+Text:600|Raleway&display=swap');
 
 .eachRecipeImage {
-    background-image: url('.././img/skillet.jpg');
-    background-size : cover;
-    resize          : both;
+    background-image: url('.././img/cutting-board.jpg');
+    background-size: cover;
+    height: 1000px;
     overflow        : scroll;
     opacity         : 0.8;
 }
