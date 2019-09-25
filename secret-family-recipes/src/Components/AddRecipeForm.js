@@ -49,18 +49,18 @@ const ButtonDiv = styled.div`
 `
 
 const Button = styled.button`
-	margin: 10px;
+	margin: 20px;
 	width: 180px;
 	height: 40px;
-	background: #6d748c;
+	background: #558B6E;
 	color: white;
 	font-size: 15px;
 	outline: none;
 	:hover {
 		background-color: white;
-		color: #6d748c;
-		border: 2px solid #6d748c;
-	}
+		color: #558B6E;
+		border: 2px solid #558B6E;
+}
 `
 
 class AddRecipeForm extends React.Component {

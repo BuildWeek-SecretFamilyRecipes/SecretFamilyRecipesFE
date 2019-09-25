@@ -13,7 +13,7 @@ const EachRecipe = styled.div`
 	height: 250px;
 	margin: 30px 15px;
 	line-height: 25px;
-	border: 2px dotted #1f1f44;
+	border: 2px solid #2E0014;
 	border-radius: 10px;
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
@@ -29,8 +29,8 @@ const TitleAndCategory = styled.div`
 	align-items: center;
 	width: 318px;
 	height: 250px;
-	background-color: #e3e3e3;
-	opacity: 0.9;
+	background-color: #2E0014;
+	// opacity: 0.9;
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
 `
@@ -41,7 +41,7 @@ const Title = styled.p`
 	display: flex;
 	justify-content: center;
 	font-weight: bold;
-	color: #1f1f44;
+	color: #FFFF;
 `
 
 const Category = styled.p`
@@ -49,6 +49,7 @@ const Category = styled.p`
 	display: flex;
 	justify-content: center;
 	font-family: 'Nunito', sans-serif;
+	color: #FFFF;
 	font-style: italic;
 `
 
@@ -57,15 +58,16 @@ const Button = styled.button`
 	width: 150px;
 	height: 40px;
 	font-family: 'Nunito', sans-serif;
-	// background: #6d748c;
-	color: white;
+	background: #FFFF;
+	border: 2px solid #2E0014;
+	color: #2E0014;
 	font-size: 15px;
 	border-radius: 10px;
 	outline: none;
 	:hover {
-		background-color: white;
-		color: #6d748c;
-		border: 2px solid #6d748c;
+		// background-color: white;
+		// color: #6d748c;
+		border: none;
 	}
 `
 
@@ -76,7 +78,7 @@ class Recipe extends React.Component {
 				<TitleAndCategory>
 					<Title>
 						{' '}
-						<strong>~ {this.props.recipe.title} ~</strong>
+						<strong>{this.props.recipe.title}</strong>
 					</Title>
 					<Category>{this.props.recipe.category}</Category>
 				</TitleAndCategory>

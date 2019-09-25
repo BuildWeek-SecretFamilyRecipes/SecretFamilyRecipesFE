@@ -22,7 +22,7 @@ const EditInput = styled.div`
 	width: 700px;
 	height: 600px;
 	background-color: #e3e3e3;
-	opacity: 0.9;
+	// opacity: 0.9;
 	@media (max-width: 800px) {
 		width: 500px;
 		height: 650px;
@@ -72,14 +72,14 @@ const Button = styled.button`
 	margin: 20px;
 	width: 180px;
 	height: 40px;
-	background: #6d748c;
+	background: #558B6E;
 	color: white;
 	font-size: 15px;
 	outline: none;
 	:hover {
 		background-color: white;
-		color: #6d748c;
-		border: 2px solid #6d748c;
+		color: #558B6E;
+		border: 2px solid #558B6E;
 	}
 `
 

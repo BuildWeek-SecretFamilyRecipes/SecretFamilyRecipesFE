@@ -20,7 +20,7 @@
 	width: 700px;
 	height: 600px;
 	background-color: #e3e3e3;
-	opacity: 0.9;
+	/* opacity: 0.9; */
 }
 
 @media (max-width: 800px) {
