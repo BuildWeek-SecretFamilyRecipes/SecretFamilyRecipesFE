@@ -44,8 +44,8 @@ header h1 {
 	border-bottom: 2px solid #ffffff;
 	border-top: 2px solid #ffffff;
 	color: #ffffff;
-	font-family: 'Amatic SC', cursive;
-	font-size: 8.75rem;
+	font-family: 'Crimson Text', serif;;
+	font-size: 5rem;
 	margin: 0;
 }
 header h3 {
@@ -86,9 +86,9 @@ header {
 }
 
 header nav {
+	color: #2E0014;
 	display: flex;
 	justify-content: space-evenly;
-	background-color: red;
 }
 
 header a {
@@ -99,7 +99,7 @@ header a {
 }
 
 .active {
-	color: #e85a4f;
+	color: #2E0014;
 }
 
 /* background: rgba(84, 249, 227, 1);

@@ -10,6 +10,7 @@ const RecipeLists = styled.div`
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
+
 `
 
 const Quote = styled.div`
@@ -40,16 +41,16 @@ class RecipeList extends React.Component {
 		// 	recipesToDisplay = this.props.recipes
 		// }
 		return (
-			<div>
-				<div className='main-image'>
+			<div className="recipe-cards">
+				{/* <div className='main-image'>
 					<Quote>
 						<p></p>
 					</Quote>
-				</div>
+				</div> */}
 				<SearchBar cb={this.filter} />
 				<RecipeLists>
 				{this.props.filteredRecipes.length === 0 ? (
-						<h2>no recipes</h2>
+						<h2>No Recipes Available</h2>
 					) : this.props.filteredRecipes.map((recipe) => (
 						<Recipe recipe={recipe} />
 					))}

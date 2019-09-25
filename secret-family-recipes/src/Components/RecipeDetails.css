@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Crimson+Text:600|Raleway&display=swap');
 
 .eachRecipeImage {
-    background-image: url('.././img/skillet.jpg');
-    background-size : cover;
-    margin-top      : 50px;
-    resize          : both;
+    background-image: url('.././img/cutting-board.jpg');
+    background-size: cover;
+    height: 1000px;
     overflow        : scroll;
     opacity         : 0.8;
 }
@@ -46,6 +45,7 @@ h4 {
     font-size  : 20px;
     font-family: 'Nunito', sans-serif;
     padding: 0 100px;
+    color: #F1DABF;
 }
 
 h5 {
@@ -69,3 +69,4 @@ h5 {
     align-items: center;
     padding: 10px;
 }
+

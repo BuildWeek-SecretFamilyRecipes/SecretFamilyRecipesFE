@@ -48,7 +48,7 @@ class App extends React.Component {
 							<nav>
 								<NavLink
 									to='/signup'
-								>Sign Up</NavLink>
+								>Don't have an account? Sign Up</NavLink>
 							</nav>
 						)}
 					/>
@@ -59,7 +59,7 @@ class App extends React.Component {
 							<nav>
 								<NavLink
 									to='/login'
-								>Log In</NavLink>
+								>Login</NavLink>
 							</nav>
 						)}
 					/>

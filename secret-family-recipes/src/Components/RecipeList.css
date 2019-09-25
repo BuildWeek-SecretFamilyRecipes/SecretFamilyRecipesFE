@@ -1,13 +1,12 @@
-/* .main-image {
-    background-image: url('../img/mom-and-daughter.jpg');
-    background-size : cover;
-    resize          : both;
-    overflow        : scroll;
-    margin          : 30px 0;
-
-} */
-
 body {
 	width: 100vw;
 	height: 100vh;
+}
+
+.recipe-cards {
+    background-image: url('../img/more-pie.jpg');
+    background-size : cover;
+    overflow        : scroll;
+    opacity: 0.7;
+    height: 1000px;
 }

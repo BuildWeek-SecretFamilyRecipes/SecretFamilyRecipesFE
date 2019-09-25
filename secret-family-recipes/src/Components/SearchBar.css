@@ -1,5 +1,6 @@
-body {
+/* body {
 	background: rgb(180, 179, 179);
+	width: 200px;
 }
 
 .searchbar {
@@ -130,4 +131,16 @@ body {
 	.select-wrapper:after {
 		top: 10px;
 	}
+} */
+
+form.filter {
+    margin: 20px auto 10px auto;
+    width: 200px;
+    display: flex;
+	justify-content: space-around;
+}
+
+form.filter input {
+    text-align: center;
+	max-width: 200px;
 }

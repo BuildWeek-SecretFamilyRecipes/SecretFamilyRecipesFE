@@ -18,7 +18,7 @@ function Navbar() {
 											textDecoration: 'none',
 											color: 'orange'
 										}}>
-										<h3> SIGN UP </h3>
+										{/* <h3>Don't have an account? SIGN UP</h3> */}
 									</Link>
 								)}
 							</li>

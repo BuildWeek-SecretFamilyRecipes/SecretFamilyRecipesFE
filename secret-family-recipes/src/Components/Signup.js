@@ -18,6 +18,7 @@ const Input = styled.input`
 `
 
 const LoginForm = styled.div`
+	font-size: 16px;
 	max-width: 400px;
 	margin: 50px auto;
 	height: 300px;

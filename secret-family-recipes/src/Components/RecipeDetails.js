@@ -4,18 +4,18 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import './RecipeDetails.css'
-// import { ReactComponent as EditIcon } from './Image/edit.svg'
-// import { ReactComponent as DeleteIcon } from './Image/trash.svg'
+
 
 const Title = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	color: #F1DABF;
 	width: 550px;
 	height: 190px;
 	border-radius: 5px;
-	background-color: #e3e3e3;
+	background-color: #558B6E;
 	opacity: 0.9;
 	margin: 30px auto;
 	line-height: 25px;
@@ -34,7 +34,9 @@ const MiddleContent = styled.div`
 	width: 400px;
 	height: 450px;
 	border-radius: 5px;
-	background-color: #e3e3e3;
+	background-color: #558B6E;
+	color: white;
+	font-weight: bold;
 	opacity: 0.9;
 	margin: 20px;
 	@media (max-width: 500px) {
@@ -56,15 +58,15 @@ const ButtonDiv = styled.div`
 const Button = styled.button`
 	width: 160px;
 	height: 40px;
-	background: #6d748c;
+	background: #2E0014;
 	color: white;
 	font-size: 15px;
 	margin: 0 10px;
 	outline: none;
 	:hover {
 		background-color: white;
-		color: #6d748c;
-		border: 2px solid #6d748c;
+		color: #2E0014;
+		border: 2px solid #2E0014;
 	}
 `
 
@@ -88,7 +90,7 @@ class Recipe extends React.Component {
 			<div classname='recipe'>
 				<div className='eachRecipeImage'>
 					<Title>
-						<h1>~ {this.props.recipe.title} ~</h1>
+						<h1>{this.props.recipe.title}</h1>
 						<p>
 							{' '}
 							{this.props.recipe.category} / Created by{' '}
@@ -100,7 +102,7 @@ class Recipe extends React.Component {
 									to={`/editRecipe/${this.props.recipe.id}`}>
 									{' '}
 									<Button>
-										{/* <EditIcon /> Edit Recipe */}
+										Edit Recipe
 									</Button>
 								</Link>
 							</div>
@@ -110,7 +112,7 @@ class Recipe extends React.Component {
 										this.deleteRecipe(this.props.recipe.id)
 									}>
 									{' '}
-									{/* <DeleteIcon /> Delete Recipe{' '} */}
+									Delete Recipe
 								</Button>
 							</div>
 						</ButtonDiv>

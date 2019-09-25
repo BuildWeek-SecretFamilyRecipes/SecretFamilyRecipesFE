@@ -18,6 +18,7 @@ const Input = styled.input`
 `
 
 const LoginForm = styled.div`
+	font-size: 16px;
 	color: #2E0014;
 	width: 400px;
 	margin: 50px auto;
@@ -104,14 +105,14 @@ class Login extends React.Component {
 						<Input
 							type='text'
 							name='username'
-							placeholder='desiree22'
+							placeholder='Username'
 							value={this.state.credentials.username}
 							onChange={this.handleChanges}
 						/>
 						<Input
 							type='password'
 							name='password'
-							placeholder='desireeTest'
+							placeholder='Password'
 							value={this.state.credentials.password}
 							onChange={this.handleChanges}
 						/>
