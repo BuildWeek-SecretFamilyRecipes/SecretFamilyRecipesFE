@@ -29,6 +29,10 @@ class RecipeList extends React.Component {
 		}
 	}
 
+	filter = query => {
+		this.props.search(query, this.props.recipes)
+	}
+
 	render() {
 		console.log('recipelist props', this.props)
 		// let recipesToDisplay = []
@@ -42,7 +46,7 @@ class RecipeList extends React.Component {
 						<p></p>
 					</Quote>
 				</div>
-				<SearchBar />
+				<SearchBar cb={this.filter} />
 				<RecipeLists>
 				{this.props.filteredRecipes.length === 0 ? (
 						<h2>no recipes</h2>
