@@ -105,7 +105,7 @@ class EditRecipeForm extends React.Component {
 			this.setState({
 				title: this.props.recipe.title,
 				source: this.props.recipe.source,
-				decription: this.props.recipe.description,
+				description: this.props.recipe.description,
 				amount: this.props.recipe.amount,
 				ingredient: this.props.recipe.ingredient,
 				instructions: this.props.recipe.instructions,

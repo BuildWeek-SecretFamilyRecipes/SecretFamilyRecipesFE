@@ -79,9 +79,9 @@ class Recipe extends React.Component {
 		this.props.getRecipe(this.props.match.params.id)
 	}
 
-	componentDidUpdate() {
-		this.props.getRecipe(this.props.match.params.id)
-	}
+	// componentDidUpdate() {
+	// 	this.props.getRecipe(this.props.match.params.id)
+	// }
 
 	render() {
 		return (

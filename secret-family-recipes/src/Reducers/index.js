@@ -183,7 +183,7 @@ function reducer(state = initialState, action) {
 				loggingIn: true
 			}
 		case LOGIN_USER_SUCCESS:
-			localStorage.setItem('token', action.payload.token)
+			localStorage.setItem('user_id', action.payload.user_id)
 			return {
 				...state,
 				loggingIn: false,
