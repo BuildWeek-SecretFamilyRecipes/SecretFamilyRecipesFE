@@ -82,6 +82,10 @@ class Login extends React.Component {
 		})
 	}
 
+	// componentDidMount() {
+
+	// }
+
 	registerUser = (e) => {
 		e.preventDefault()
 		this.props.registerUser(this.state.credentials)
@@ -96,6 +100,8 @@ class Login extends React.Component {
 		if (localStorage.getItem('token')) {
 			this.props.history.push('/recipes')
 		}
+
+		const user_id = localStorage.getItem('user_id')
 
 		return (
 			<div>
@@ -117,7 +123,7 @@ class Login extends React.Component {
 							onChange={this.handleChanges}
 						/>
 						<LoginButton>
-							<Link to='/recipes'>
+							<Link to= {`/recipes/${user_id}` } >
 								<Button
 									onClick={(event) => this.loginUser(event)}>
 									Login

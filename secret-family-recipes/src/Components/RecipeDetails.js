@@ -87,7 +87,7 @@ class Recipe extends React.Component {
 
 	render() {
 		return (
-			<div classname='recipe'>
+			<div className='recipe'>
 				<div className='eachRecipeImage'>
 					<Title>
 						<h1>{this.props.recipe.title}</h1>
@@ -128,7 +128,7 @@ class Recipe extends React.Component {
 								<h4>INGREDIENTS </h4>
 							</div>
 							<div className='content'>
-							<p>{this.props.recipe.ingredient}</p>
+							<p>{this.props.recipe.ingredients}</p>
 							</div>
 						</MiddleContent>
 

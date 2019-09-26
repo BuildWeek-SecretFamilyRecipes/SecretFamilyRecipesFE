@@ -47,7 +47,7 @@ const initialState = {
 		source: '',
 		description: '',
 		amount: '',
-		ingredient: '',
+		ingredients: '',
 		measurement: '',
 		instructions: '',
 		category: ''
