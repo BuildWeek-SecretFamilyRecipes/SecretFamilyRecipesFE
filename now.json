@@ -1,0 +1,8 @@
+{
+    "version": 2,
+    "name": "secret-family-recipes",
+    "builds": [{ "src": "secret-family-recipes/package.json", "use": "@now/static-build", "config": {"distDir": "build"} }],
+    "routes": [
+        { "src": "/(.*)", "dest": "secret-family-recipes/$1" }
+    ]
+ }
