@@ -3,7 +3,8 @@ command = “yarn build”
 functions = “functions”
 publish = “secret-family-recipes/build”
 base= “secret-family-recipes”
-[[redirects]]
-  from = “/*”
-  to = “/index.html”
-  status = 200
+
+  [[redirects]]
+    from = “/*”
+    to = “/index.html”
+    status = 200
