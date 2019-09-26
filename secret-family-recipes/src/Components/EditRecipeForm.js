@@ -87,7 +87,7 @@ class EditRecipeForm extends React.Component {
 	state = {
 		title: '',
 		source: '',
-		ingredient: '',
+		ingredients: '',
 		instructions: '',
 		category: ''
 	}
@@ -102,7 +102,7 @@ class EditRecipeForm extends React.Component {
 			this.setState({
 				title: this.props.recipe.title,
 				source: this.props.recipe.source,
-				ingredient: this.props.recipe.ingredient,
+				ingredients: this.props.recipe.ingredients,
 				instructions: this.props.recipe.instructions,
 				category: this.props.recipe.category
 			})
@@ -168,8 +168,8 @@ class EditRecipeForm extends React.Component {
 									className='input'
 									onChange={this.handleChange}
 									placeholder='ingredients'
-									value={this.state.ingredient}
-									name='ingredient'
+									value={this.state.ingredients}
+									name='ingredients'
 								/>
 							</EachInput>
 
@@ -203,7 +203,11 @@ class EditRecipeForm extends React.Component {
 								<Button
 									className='button'
 									type='submit'
-									onClick={(event) => this.editRecipe(event)}>
+									onClick={(event) => { 
+									console.log(this.state)
+									
+									return this.editRecipe(event)}}>
+
 									{' '}
 									Update Recipe{' '}
 								</Button>

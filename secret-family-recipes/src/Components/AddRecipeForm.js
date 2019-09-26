@@ -67,7 +67,7 @@ class AddRecipeForm extends React.Component {
 	state = {
 		title: '',
 		source: '',
-		ingredient: '',
+		ingredients: '',
 		instructions: '',
 		category: ''
 	}
@@ -136,8 +136,8 @@ class AddRecipeForm extends React.Component {
 									className='instructionsInput'
 									onChange={this.handleChange}
 									placeholder='ingredients'
-									value={this.state.ingredient}
-									name='ingredient'></textarea>
+									value={this.state.ingredients}
+									name='ingredients'></textarea>
 							</EachInput>
 							<EachInput>
 								<div className='items'>

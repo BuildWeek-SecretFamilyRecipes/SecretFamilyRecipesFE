@@ -37,15 +37,17 @@ export const LOGIN_USER_FAILURE = 'LOGIN_USER_FAILURE'
 
 export const EDIT_RECIPE = 'EDIT_RECIPE'
 
-const baseEndpoint = 'https://secret-family-recipe.herokuapp.com/api/auth/'
+const baseEndpoint = 'https://secretfamilyrecipe.herokuapp.com'
 
 export const addRecipe = (newRecipe) => (dispatch) => {
-	newRecipe.user_id = localStorage.getItem('user_id')
+	const user_id = localStorage.getItem('user_id')
 	console.log('JJJJJJ', newRecipe)
 	dispatch({ type: ADD_RECIPE_START })
 
+
+
 	axiosWithAuth()
-		.post(baseEndpoint + 'new-recipe', newRecipe)
+		.post(baseEndpoint + `/api/users/${user_id}/recipes`, newRecipe)
 		.then((res) => {
 			console.log('lol', res.data)
 			return dispatch({
@@ -67,7 +69,7 @@ export const deleteRecipe = (id) => (dispatch) => {
 		type: DELETE_RECIPE_START
 	})
 	return axiosWithAuth()
-		.delete(baseEndpoint + 'recipes/' + id)
+		.delete(baseEndpoint + `/api/users/recipes/${id}`)
 		.then((res) => {
 			dispatch({
 				type: DELETE_RECIPE_SUCCESS,
@@ -88,7 +90,7 @@ export const editRecipe = (updatedRecipe) => (dispatch) => {
 	})
 	let id = updatedRecipe.id
 	return axiosWithAuth()
-		.put(baseEndpoint + 'recipes/' + id, updatedRecipe)
+		.put(baseEndpoint + `/api/users/recipes/${id}` , updatedRecipe)
 		.then((res) => {
 			dispatch({
 				type: EDIT_RECIPE_SUCCESS,
@@ -109,7 +111,7 @@ export const getRecipe = (id) => (dispatch) => {
 	})
 	return axiosWithAuth()
 		.get(
-			`https://secret-family-recipe.herokuapp.com/api/auth/find-recipes/${id}`
+			`https://secretfamilyrecipe.herokuapp.com/api/users/recipes/${id}`
 		)
 		.then((res) => {
 			console.log('getRecipe response', res)
@@ -132,15 +134,17 @@ export const getRecipes = () => (dispatch) => {
 		type: GET_RECIPES_START
 	})
 	const userID = localStorage.getItem('user_id')
-	return axiosWithAuth()
-		.get(baseEndpoint + `${userID}/recipes`)
+		axiosWithAuth()
+		.get(baseEndpoint + `/api/users/${userID}/recipes`)
 		.then((res) => {
+			console.log("YOOOO", res);
 			dispatch({
 				type: GET_RECIPES_SUCCESS,
 				payload: res.data
 			})
 		})
 		.catch((err) => {
+			console.log(err);
 			dispatch({
 				type: GET_RECIPES_FAILURE,
 				payload: err
@@ -155,7 +159,7 @@ export const registerUser = (newUser) => (dispatch) => {
 	})
 	return axios
 		.post(
-			'https://secret-family-recipe.herokuapp.com/api/auth/register',
+			'https://secretfamilyrecipe.herokuapp.com/api/auth/register',
 			newUser
 		)
 		.then((res) => {
@@ -178,9 +182,11 @@ export const loginUser = (user) => (dispatch) => {
 		type: LOGIN_USER_START
 	})
 	return axiosWithAuth()
-		.post('https://secret-family-recipe.herokuapp.com/api/auth/login', user)
+		.post('https://secretfamilyrecipe.herokuapp.com/api/auth/login', user)
 		.then((res) => {
 			console.log('DATE', res.data)
+			localStorage.setItem('token', res.data.token)
+			localStorage.setItem('user_id', res.data.user.id)
 			dispatch({
 				type: LOGIN_USER_SUCCESS,
 				payload: res.data

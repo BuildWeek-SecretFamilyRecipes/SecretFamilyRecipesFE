@@ -52,7 +52,7 @@ class RecipeList extends React.Component {
 				{this.props.filteredRecipes.length === 0 ? (
 						<h2>No Recipes Available</h2>
 					) : this.props.filteredRecipes.map((recipe) => (
-						<Recipe recipe={recipe} />
+						<Recipe key={recipe.id} recipe={recipe} />
 					))}
 				</RecipeLists>
 			</div>
